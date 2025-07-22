@@ -1,10 +1,19 @@
-import React from 'react'
+import { Container } from 'react-bootstrap';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
-      <h1>Amazon</h1>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Container className='py-3'>
+          <Outlet />
+        </Container>
+      </main>
+      <Footer />
+    </>
   )
 }
 

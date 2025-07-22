@@ -1,0 +1,87 @@
+/* Amazon clone specific styles */
+.main {
+  min-height: 80vh;
+  background-color: #f3f3f3; /* Amazon's background color */
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+.rating svg {
+  color: #FFA41C; /* Amazon's orange rating color */
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 0.5rem;
+  color: #007185; /* Amazon's link color */
+}
+
+.product-title {
+  text-decoration: none;
+  height: 2.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #0F1111; /* Amazon's primary text color */
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+table td,
+table th {
+  text-align: center;
+}
+
+.review {
+  margin-top: 30px;
+  border-top: 1px solid #e7e7e7; /* Amazon's divider color */
+  padding-top: 20px;
+}
+
+.review h2 {
+  font-size: 18px; /* Amazon's review heading size */
+  background: #f7f7f7;
+  padding: 10px;
+  border: 1px solid #ddd;
+  color: #0F1111;
+  font-weight: 700;
+}
+
+.review button {
+  margin-top: 10px;
+  background: #FFD814; /* Amazon's yellow button color */
+  border-color: #FCD200;
+  border-radius: 8px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.carousel-caption {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Additional Amazon-like styles */
+.price {
+  color: #B12704; /* Amazon's price color */
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.prime-badge {
+  color: #00A8E1; /* Amazon Prime blue */
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background: #FFA41C; /* Amazon's orange button */
+  border-color: #FF8F00;
+}
