@@ -1,6 +1,4 @@
 import mongoose from "mongoose";
-import { type } from "os";
-import { timestamp } from "rxjs";
 
 const orderSchema = mongoose.Schema({
     user: {
@@ -13,7 +11,7 @@ const orderSchema = mongoose.Schema({
             name: { type: String, required: true },
             qty: { type: Number, required: true },
             image: { type: String, required: true },
-            price: { type: String, required: true },
+            price: { type: Number, required: true },
             product: {
                 type: mongoose.Schema.Types.ObjectId,
                 required: true,
@@ -28,7 +26,7 @@ const orderSchema = mongoose.Schema({
         postalCode: { type: String, required: true },
         country: { type: String, required: true },
     },
-    paymentMetod: {
+    paymentMethod: {
         type: String,
         required: true,
     },
@@ -39,7 +37,7 @@ const orderSchema = mongoose.Schema({
         update_time: { type: String},
         email_address: { type: String },
     },
-    itemPrice: {
+    itemsPrice: {
         type: Number,
         required: true,
         default: 0.0,
@@ -76,7 +74,7 @@ const orderSchema = mongoose.Schema({
         type: Date,
     },
 }, {
-    timestamp: true,
+    timestamps: true,
 });
 
 const Order = mongoose.model("Order", orderSchema);

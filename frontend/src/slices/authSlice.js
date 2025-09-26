@@ -2,12 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     userInfo: localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null,
+    //check if user info is already saved in local storage from previous login
+    //if so parse and load it to redux state
 }
 
-const authSlicce = createSlice({
-    name: 'auth',
-    initialState,
-    reducers: {
+const authSlice = createSlice({
+    name: 'auth', //identifies this part of the redux store
+    initialState, //sets the starting default
+    reducers: { //reducers change the state based on actions
         setCredentials: (state, action) => {
             state.userInfo = action.payload;
             localStorage.setItem('userInfo', JSON.stringify(action.payload))
@@ -19,6 +21,6 @@ const authSlicce = createSlice({
     },
 });
 
-export const { setCredentials, logout } = authSlicce.actions;
+export const { setCredentials, logout } = authSlice.actions;
 
-export default authSlicce.reducer;
+export default authSlice.reducer;
